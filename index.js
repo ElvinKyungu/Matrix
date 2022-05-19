@@ -1,15 +1,15 @@
 import * as datGui from "https://cdn.skypack.dev/dat.gui@0.7.7";
 
         const state = {
-        fps: 60,
-        color: "#0f0",
-        charset: "0123456789ABCDEF"
+            vitesse: 60,
+            couleur: "#0f0",
+            Encodage: "0123456789ABCDEF"
         };
 
         const gui = new datGui.GUI();
-        const fpsCtrl = gui.add(state, "fps").min(1).max(120).step(1);
-        gui.addColor(state, "color");
-        gui.add(state, "charset");
+        const fpsCtrl = gui.add(state, "vitesse").min(1).max(120).step(1);
+        gui.addColor(state, "couleur");
+        gui.add(state, "Encodage");
 
         const canvas = document.getElementById("canvas");
         const ctx = canvas.getContext("2d");
